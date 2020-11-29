@@ -10,7 +10,7 @@ public class CountSubstrings {
      * （1）i，j之间的元素小于2个,这种情况下必为回文串
      * （2）i，j之间的元素大于等于2个，只要dp[i+1][j-1]是回文串即可
      * 注意：这里在组合每一个子串的时候需要双重for循环，将外层for循环设置为子串的最后一个位置（j）,内层循环设置为最前面一个位置(i)
-     * 时间复杂度：O(m*n)  grid数组的元素个数
+     * 时间复杂度：O(n^2)
      */
     public int countSubstrings(String s) {
         boolean[][] dp = new boolean[s.length()][s.length()];
